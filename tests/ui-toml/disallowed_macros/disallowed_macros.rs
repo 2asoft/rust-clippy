@@ -46,3 +46,29 @@ impl Y for S {
 
 #[derive(Derive)]
 struct Foo;
+
+pub fn print_1_arg() {
+    print!("foo");
+    //~^ disallowed_macros
+}
+pub fn print_2_args() {
+    print!("{}", 123);
+    //~^ disallowed_macros
+}
+pub fn print_3_args() {
+    print!("{} {}", 123, 456);
+    //~^ disallowed_macros
+}
+
+pub fn panic_1_arg() {
+    panic!("foo");
+    //~^ disallowed_macros
+}
+pub fn panic_2_args() {
+    panic!("{}", 123);
+    //~^ disallowed_macros
+}
+pub fn panic_3_args() {
+    panic!("{} {}", 123, 456);
+    //~^ disallowed_macros
+}

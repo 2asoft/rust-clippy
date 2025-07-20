@@ -11,4 +11,6 @@ disallowed-macros = [
     "macros::binop",
     "macros::attr",
     "proc_macros::Derive",
+    "std::panic",
+    "std::print"
 ]
